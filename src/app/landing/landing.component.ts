@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 export class LandingComponent implements OnInit {
   getState: Observable<any>;
   isAuthenticated!: false;
-  user = null;
+  user!: any ;
   errorMessage = null;
   constructor(private store: Store<AppState>) { 
     this.getState = this.store.select(selectAuthState);
