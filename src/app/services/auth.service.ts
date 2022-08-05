@@ -16,7 +16,8 @@ export class AuthService {
 
   logIn(email: string, password: string): Observable<any> {
     const url = `${this.BASE_URL}/login`;
-    return of({ email, password, token: 'Dummy token' });
+    // return of({ email, password, token: 'Dummy token' });
+    return this.http.post(url,{email,password})
   }
 
   signUp(email: string, password: string): Observable<User> {

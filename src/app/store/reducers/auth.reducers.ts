@@ -18,6 +18,7 @@ export const initialState: State = {
 export function reducer(state = initialState, action: any): any {
   switch (action.type) {
     case AuthActionTypes.LOGIN_SUCCESS: {
+      console.log('reducer ', state)
       return {
         ...state,
         isAuthenticated: true,
