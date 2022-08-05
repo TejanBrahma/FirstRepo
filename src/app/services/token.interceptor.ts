@@ -36,7 +36,7 @@ export class ErrorInterceptor implements HttpInterceptor {
         if (response instanceof HttpErrorResponse && response.status === 401) {
           console.log(response);
         }
-        throwError(() => new Error(response));
+        return throwError(() => response);
       }
       )
       
